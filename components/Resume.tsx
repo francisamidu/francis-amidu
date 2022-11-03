@@ -4,7 +4,7 @@ import React from "react";
 
 const Resume = () => {
   return (
-    <section className="bg-slate-800 p-10">
+    <section className="bg-slate-800 p-10" id="resume">
       <h1 className="text-gray-400 text-base text-center my-1">
         Full Character Info
       </h1>

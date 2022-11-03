@@ -13,7 +13,7 @@ const Interests = () => {
     "Linkedin is what i wake up to",
   ]);
   return (
-    <section className="bg-slate-900 p-10">
+    <section className="bg-slate-900 p-10" id="interests">
       <h1 className="text-gray-400 text-sm italic text-center my-2">
         “Man cannot discover new oceans unless he has the courage to lose sight
         of the shore.” ― Andre Gide
