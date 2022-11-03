@@ -2,10 +2,10 @@ import Head from "next/head";
 import React from "react";
 
 type Props = {
-  description: string;
+  description?: string;
   title: string;
 };
-const SeoMeta = ({ description, title }: Props) => {
+const SeoMeta = ({ description = "Portfolio website", title }: Props) => {
   return (
     <Head>
       <title>{title}</title>
