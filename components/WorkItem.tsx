@@ -25,7 +25,7 @@ const WorkItem = ({
             className="text-slate-500 font-bold uppercase text-xs"
           >
             {tag}
-            {tags.length - index > 1 ? "-" : ""}
+            {tags.length - index > 1 ? "." : ""}
           </span>
         ))}
       </div>
