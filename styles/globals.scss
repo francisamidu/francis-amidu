@@ -20,7 +20,6 @@ a {
 .primary-color {
   color: var(--main-primary);
 }
-
 .nav-link-active {
   color: var(--main-primary);
 }
@@ -28,6 +27,10 @@ a {
   overflow: hidden;
   position: relative;
   display: inline-block;
+  span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
 }
 
 .nav-link-inactive::before,
@@ -63,11 +66,6 @@ a {
   transform: translate3d(0, 0, 0);
 }
 
-.nav-link-inactive span {
-  display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
 .nav-link-inactive:hover span {
   transform: translate3d(-200%, 0, 0);
 }
@@ -79,16 +77,15 @@ a {
 .lds-ellipsis {
   display: inline-block;
   position: relative;
-}
-.lds-ellipsis div {
+  div {
   position: absolute;
   top: 50%;
-
   width: 13px;
   height: 13px;
   border-radius: 50%;
   background: #fff;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
 }
 .lds-ellipsis div:nth-child(1) {
   left: 8px;
@@ -165,4 +162,10 @@ a {
   -ms-transform-origin: 0 0;
   -o-transform-origin: 0 0;
   transform-origin: 0 0;
+}
+
+@media screen and (max-width:650px) {
+  .rotate{
+    width: 75%;
+  }
 }

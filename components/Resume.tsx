@@ -18,8 +18,9 @@ const Resume = () => {
         </Link>
         <div className="mt-4 flex flex-row items-center justify-center ">
           <Image
-            src="/curriculum-vitae-portfolio-svgrepo-com.svg"
             alt="Vacancy"
+            className="w-[500] md:w-auto"
+            src="/curriculum-vitae-portfolio-svgrepo-com.svg"
             width="600"
             height="500"
           />

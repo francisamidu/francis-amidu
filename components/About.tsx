@@ -20,7 +20,7 @@ const About = () => {
           width="350"
           height="340"
           alt="My Avatar"
-          className="about-image"
+          className="about-image hidden md:flex"
         />
         <div className="ml-4">
           <h3 className="my-0 text-xs font-bold uppercase primary-color">

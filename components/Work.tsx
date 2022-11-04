@@ -52,7 +52,7 @@ const Work = () => {
   }, []);
 
   return (
-    <section className="bg-slate-800 p-6" id="work">
+    <section className="bg-slate-800 p-6 relative" id="work">
       <h1 className="text-gray-400 text-sm uppercase text-center my-2">
         All the scary dungeons, wonderful experiences and jungles explored
       </h1>

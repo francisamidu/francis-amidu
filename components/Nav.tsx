@@ -70,7 +70,7 @@ const Nav = () => {
     setLinks(newLinks);
   };
   return (
-    <nav className="bg-slate-800 p-4 z-10 shadow fixed top-1 left-0 w-full">
+    <nav className="bg-slate-800 md:p-4 px-1 py-4 z-10 shadow fixed top-1 left-0 w-full">
       <div className="flex justify-center items-center md:max-w-lg md:mx-auto">
         {links.map((link, index) => (
           <Link
@@ -83,7 +83,7 @@ const Nav = () => {
                 ? "nav-link-active"
                 : "nav-link-inactive text-gray-100"
             }               
-            font-medium mx-2  text-xs uppercase`}
+            font-medium mx-2  text-xs uppercase nav-link`}
           >
             <span>{link.name}</span>
           </Link>

@@ -32,14 +32,14 @@ const Contact = () => {
   ]);
   return (
     <section id="contact" className="p-5 bg-slate-900">
-      <div className="grid grid-cols-2 place-content-center md:max-w-4xl md:mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 place-content-center md:max-w-4xl md:mx-auto">
         <div className="mr-2">
           <h1 className="font-bold mt-0 text-4xl text-white">Contact</h1>
           <p className="mt-4 text-gray-400">
             If ever you want to hang out, chat or collaborate you can reach out
             to me. I'm an introvert but i have friends too lol
           </p>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 md-4 md:mb-0 ">
             {links.map((link, index) =>
               link?.url ? (
                 <Link

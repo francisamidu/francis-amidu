@@ -3,10 +3,10 @@ import React from "react";
 const Header = () => {
   return (
     <header
-      className="min-h-[95vh] py-4 bg-slate-900 flex flex-col justify-center items-center text-center"
+      className="sm:min-h-screen md:min-h-[95vh] w-full py-4 sm:py-10 bg-slate-900 flex flex-col justify-center items-center text-center"
       id="home"
     >
-      <h1 className="font-extralight tracking-wider uppercase text-6xl my-4 text-white">
+      <h1 className="font-extralight tracking-wider uppercase text-6xl my-4 text-white mt-8">
         Francis Amidu
       </h1>
       <h2 className="font-bold text-sm uppercase my-4 text-gray-100">

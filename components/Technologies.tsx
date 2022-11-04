@@ -24,10 +24,10 @@ const Technologies = () => {
         </h1>
         <h2 className="text-white text-4xl my-2">Treasures</h2>
       </div>
-      <div className="mt-8 grid grid-cols-6 md:max-w-2xl md:mx-auto">
+      <div className="mt-8 flex flex-row items-center justify-between flex-wrap md:grid md:gap-3 md:grid-cols-6 md:max-w-2xl md:mx-auto">
         {images.map((image) => (
           <Image
-            className="mx-2 my-1 bg-slate-900 p-3 rounded-md"
+            className="mx-0 my-1 bg-slate-900 p-3 rounded-md "
             alt={image}
             src={image}
             width="80"
