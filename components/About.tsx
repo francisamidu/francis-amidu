@@ -5,7 +5,7 @@ import {
   BiPhone as IPhone,
   BiUser as IUser,
   BiEnvelope as IEnvelope,
-} from "../../digital-asset-marketplace/node_modules/react-icons/bi";
+} from "react-icons/bi";
 
 const About = () => {
   return (
