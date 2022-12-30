@@ -32,8 +32,8 @@ const About = () => {
             of software sorcery. After being inspired and motivated by a certain
             mysterious wizard he set out on his wonderful journey of learning
             magic. 4 years after learning his first spell he has brought to life
-            a few characters in the capital of Websites, Browser. He is still
-            going strong!!
+            a few characters in the capital of Websites, Browser. Next stop, The
+            modern city in the kingdom of web3, The Metaverse!!
           </p>
           <div className="my-2">
             <div className="flex flex-col">

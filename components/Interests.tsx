@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const Interests = () => {
   const [interests, _] = useState([
+    "I'm a hardcore Anime Lover(weeb)",
     "3D animation is my next stop",
     "I'm into the blockchain",
     "Listening to music is my zen time",

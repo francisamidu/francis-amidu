@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import {
-  FaPhone as IPhone,
+  FaTwitter as ITwitter,
   FaFacebook as IFacebook,
   FaEnvelope as IEmail,
   FaLinkedin as ILinkedin,
@@ -11,13 +11,14 @@ import {
 const Contact = () => {
   const [links, _] = useState([
     {
-      icon: <IPhone className="text-4xl text-emerald-600" />,
-      name: "Phone",
+      icon: <ITwitter className="text-4xl text-emerald-600" />,
+      name: "Twitter",
+      url: "https://twitter.com/francis_amidu",
     },
     {
       icon: <IFacebook className="text-4xl text-blue-600" />,
       name: "Facebook",
-      url: "https://facebook.com/francisamidu5",
+      url: "https://facebook.com/francis.amidu.10",
     },
     {
       icon: <ILinkedin className="text-4xl text-blue-700" />,
@@ -27,7 +28,7 @@ const Contact = () => {
     {
       icon: <IEmail className="text-4xl text-white" />,
       name: "Email",
-      url: "https://www.linkedin.com/in/francis-amidu-frontend-developer",
+      url: "mailto:francisamidu124@gmail.com",
     },
   ]);
   return (
