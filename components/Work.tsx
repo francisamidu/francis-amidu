@@ -8,12 +8,12 @@ const Work = () => {
   const [work, _] = useState<IWork[]>([
     {
       id: uid(),
-      name: "GoalsApp",
-      description: "Modern landing page design for my GoalsApp",
-      image: "/goalsapp.jpg",
-      code: "https://github.com/francisamidu/goalsapp",
-      web: "http://goalsapp.vercel.app/",
-      tags: ["react", "tailwindcss", "nextjs"],
+      name: "MoralisApp",
+      description: "A website demonstrating moralis auth and API usage",
+      image: "/moralis.jpg",
+      code: "https://github.com/francisamidu/moralis-app",
+      web: "http://moralis-info-app.netlify.app/",
+      tags: ["react", "moralis", "nextjs"],
     },
     {
       id: uid(),
