@@ -15,16 +15,16 @@ const Work = () => {
       web: "http://moralis-info-app.netlify.app/",
       tags: ["react", "moralis", "nextjs"],
     },
-    {
-      id: uid(),
-      name: "UniPaye",
-      description:
-        "Unipaye landing page design (leading BNPL system for metaverse users)",
-      image: "/unipaye_landing.jpg",
-      code: "https://.github.com/francisamidu/unipaye",
-      web: "https://unipaye.netlify.app",
-      tags: ["react", "tailwindcss", "nextjs", "sass"],
-    },
+    // {
+    //   id: uid(),
+    //   name: "UniPaye",
+    //   description:
+    //     "Unipaye landing page design (leading BNPL system for metaverse users)",
+    //   image: "/unipaye_landing.jpg",
+    //   code: "https://.github.com/francisamidu/unipaye",
+    //   web: "https://unipaye.netlify.app",
+    //   tags: ["react", "tailwindcss", "nextjs", "sass"],
+    // },
     {
       id: uid(),
       name: "Monstercrypt",
