@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, WorkItem } from ".";
-import { uid } from "../helpers";
-import getRandomColor from "../helpers/randomColor";
-import IWork from "../types/Work";
+import { getRandomColor, uid } from "../helpers";
+import { Work as IWork } from "../types";
 
 const Work = () => {
   const [work, _] = useState<IWork[]>([
