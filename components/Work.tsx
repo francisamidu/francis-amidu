@@ -14,6 +14,15 @@ const Work = () => {
       web: "http://moralis-info-app.netlify.app/",
       tags: ["react", "moralis", "nextjs"],
     },
+    {
+      id: uid(),
+      name: "Ytb-Downloader",
+      description: "A personal YouTube playlist downloader",
+      image: "/ytb.jpg",
+      code: "https://github.com/francisamidu/ytb-downloader",
+      web: "http://ytb-downloader-app.netlify.app/",
+      tags: ["react", "nextjs", "tailwindcss", "nodejs"],
+    },
     // {
     //   id: uid(),
     //   name: "UniPaye",
