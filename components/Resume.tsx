@@ -12,7 +12,7 @@ const Resume = () => {
       <div className="flex flex-col justify-center items-center">
         <Link
           className="my-1 text-gray-300"
-          href="/Francis-Amidu-Frontend-Developer-Cv.pdf"
+          href="/Francis-Amidu-Frontend-Engineer-Resume.pdf"
         >
           Download
         </Link>

@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     window.addEventListener("scroll", progressBar);
     setTimeout(() => {
-      setTitle("Francis Amidu - Full-Stack Web3 Engineeer");
+      setTitle("Francis Amidu - Full-Stack Software Engineeer");
       setShowLoader(false);
     }, 5000);
     return () => {
