@@ -10,8 +10,8 @@ const Interests = () => {
     "I love to hang with fellow devs",
     "I spend my free time laughing to programming memes",
     "I have taken a heavy liking to the Metaverse",
-    "(React|Redux|React Native) is my forte",
-    "Linkedin is what i wake up to",
+    "(React | Redux | Tailwindcss) is my forte",
+    "Linkedin, Twitter and Discord is what i wake up to",
   ]);
   return (
     <section className="bg-slate-900 p-10" id="interests">
