@@ -18,7 +18,7 @@ const WorkItem = ({
 }: WorkItem) => {
   return (
     <div className="flex flex-row w-full md:w-[850px] mx-2 hover:shadow bg-slate-900 p-4 my-2 rounded-md relative">
-      <div className="rotate flex flex-row items-center justify-center w-full">
+      <div className="rotate flex flex-row items-center justify-center">
         {tags.map((tag, index) => (
           <span
             key={index}

@@ -13,7 +13,7 @@ const Contact = () => {
     {
       icon: <ITwitter className="text-4xl text-emerald-600" />,
       name: "Twitter",
-      url: "https://twitter.com/francis_amidu",
+      url: "https://twitter.com/iamfrancisamidu",
     },
     {
       icon: <IFacebook className="text-4xl text-blue-600" />,
