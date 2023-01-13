@@ -17,23 +17,23 @@ const WorkItem = ({
   web,
 }: WorkItem) => {
   return (
-    <div className="flex flex-row w-full md:w-[650px] mx-2 hover:shadow bg-slate-900 p-4 my-2 rounded-md relative">
-      <div className="rotate flex flex-row items-center justify-center">
+    <div className="flex flex-row w-full md:w-[850px] mx-2 hover:shadow bg-slate-900 p-4 my-2 rounded-md relative">
+      <div className="rotate flex flex-row items-center justify-center w-full">
         {tags.map((tag, index) => (
           <span
             key={index}
             className="text-slate-500 font-bold uppercase text-xs"
           >
             {tag}
-            {tags.length - index > 1 ? "-" : ""}
+            {tags.length - index > 1 ? " - " : ""}
           </span>
         ))}
       </div>
       <Image
         alt="work-item"
         src={image}
-        width="275"
-        height="400"
+        width="600"
+        height="450"
         className="ml-5 rounded-2xl md:order-2"
       />
       <div className="ml-0 md:ml-5 my-2 p-3 flex flex-col md:order-1">

@@ -40,7 +40,7 @@ const Work = () => {
       image: "/animescraper.jpg",
       code: "https://github.com/francisamidu/anime-scraper",
       web: "http://anime-scraper.netlify.app/",
-      tags: ["react", "nextjs", "tailwindcss", "nodejs", "mongodb"],
+      tags: ["react", "nextjs", "nodejs", "mongodb"],
     },
     // {
     //   id: uid(),
@@ -52,26 +52,6 @@ const Work = () => {
     //   web: "https://unipaye.netlify.app",
     //   tags: ["react", "tailwindcss", "nextjs", "sass"],
     // },
-    {
-      id: uid(),
-      name: "Monstercrypt",
-      description:
-        "A Fullstack NFT marketplace built for NFT creators and collectors",
-      image: "/monstercrypt.jpg",
-      code: "https://.github.com/francisamidu/monstercrypt",
-      web: "https://digital-asset-marketplace.netlify.app/",
-      tags: ["react", "tailwindcss", "nextjs", "solidity"],
-    },
-    {
-      id: uid(),
-      name: "NFT Minter",
-      description:
-        "An NFT minting website built for NFT minters to mint their assets easily",
-      image: "/nftminter.jpg",
-      code: "https://github.com/francisamidu/nft-minter",
-      web: "https://nft-minter-web3.netlify.app/",
-      tags: ["react", "tailwindcss", "nextjs", "solidity"],
-    },
   ]);
   const [randomColors, setRandomColors] = useState<Array<any | string>>([]);
   useEffect(() => {
