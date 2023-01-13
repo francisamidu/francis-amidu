@@ -23,6 +23,25 @@ const Work = () => {
       web: "http://ytb-downloader-app.netlify.app/",
       tags: ["react", "nextjs", "tailwindcss", "nodejs"],
     },
+    {
+      id: uid(),
+      name: "Firelist",
+      description: "A firebase-powered todo app that works",
+      image: "/firelist.jpg",
+      code: "https://github.com/francisamidu/firelist",
+      web: "http://firelist.netlify.app/",
+      tags: ["react", "nextjs", "tailwindcss", "firebase"],
+    },
+    {
+      id: uid(),
+      name: "Animescraper",
+      description:
+        "An anime scraper that keeps track of your favorite animes and sends you notification after an update",
+      image: "/animescraper.jpg",
+      code: "https://github.com/francisamidu/anime-scraper",
+      web: "http://anime-scraper.netlify.app/",
+      tags: ["react", "nextjs", "tailwindcss", "nodejs", "mongodb"],
+    },
     // {
     //   id: uid(),
     //   name: "UniPaye",
