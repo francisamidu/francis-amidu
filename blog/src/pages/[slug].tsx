@@ -13,7 +13,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 export default function BlogPost({ post: { source, frontmatter } }) {
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>{frontmatter.title} | My blog</title>
       </Head>
@@ -27,7 +27,7 @@ export default function BlogPost({ post: { source, frontmatter } }) {
           <MDXRemote {...source} components={{ Image }} />
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
