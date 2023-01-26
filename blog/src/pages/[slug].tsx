@@ -4,13 +4,13 @@ import Head from "next/head";
 import Image from "next/image";
 import rehypeSlug from "rehype-slug";
 import { MDXRemote } from "next-mdx-remote";
+import { Pluggable, Settings, Plugin } from "../../node_modules/unified";
 import rehypeHighlight from "rehype-highlight";
 import rehypeCodeTitles from "rehype-code-titles";
-import { serialize } from "next-mdx-remote/serialize";
-import { getSlug, getArticleFromSlug } from "@utils/mdx";
+import sr from "next-mdx-remote/serialize";
+import { getSlug, getArticleFromSlug } from "../utils/mdx";
 import "highlight.js/styles/atom-one-dark-reasonable.css";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-
 export default function BlogPost({ post: { source, frontmatter } }) {
   return (
     <>
@@ -31,23 +31,21 @@ export default function BlogPost({ post: { source, frontmatter } }) {
   );
 }
 
-export async function getStaticProps({ params }) {
-  //fetch the particular file based on the slug
+export const getStaticProps = async ({ params }) => {
   const { slug } = params;
   const { content, frontmatter } = await getArticleFromSlug(slug);
 
-  const mdxSource = await serialize(content, {
+  const mdxSource = await sr.serialize(content, {
     mdxOptions: {
       rehypePlugins: [
-        rehypeSlug,
+        rehypeSlug as Pluggable<[Settings?], Settings>,
         [
-          rehypeAutolinkHeadings,
+          rehypeAutolinkHeadings as Plugin<[Settings?], Settings>,
           {
             properties: { className: ["anchor"] },
           },
-          { behaviour: "wrap" },
         ],
-        rehypeHighlight,
+        rehypeHighlight as Pluggable<[Settings?], Settings>,
         rehypeCodeTitles,
       ],
     },
@@ -61,7 +59,7 @@ export async function getStaticProps({ params }) {
       },
     },
   };
-}
+};
 
 // dynamically generate the slugs for each article(s)
 export async function getStaticPaths() {
