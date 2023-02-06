@@ -7,6 +7,15 @@ const Work = () => {
   const [work, _] = useState<IWork[]>([
     {
       id: uid(),
+      name: "Tornic",
+      description: "Landing page design for an AI image generator",
+      image: "/tornic.jpg",
+      code: "https://github.com/francisamidu/landing-page",
+      web: "http://tornic.netlify.app/",
+      tags: ["react", "tailwind", "nextjs", "vite"],
+    },
+    {
+      id: uid(),
       name: "MoralisApp",
       description: "A website demonstrating moralis auth and API usage",
       image: "/moralis.jpg",
