@@ -50,16 +50,16 @@ const Work = () => {
     //   web: "http://firelist.netlify.app/",
     //   tags: ["react", "nextjs", "tailwindcss", "firebase"],
     // },
-    // {
-    //   id: uid(),
-    //   name: "Animescraper",
-    //   description:
-    //     "An anime scraper that keeps track of your favorite animes and sends you notification after an update",
-    //   image: "/animescraper.jpg",
-    //   code: "https://github.com/francisamidu/anime-scraper",
-    //   web: "http://anime-scraper.netlify.app/",
-    //   tags: ["react", "nextjs", "nodejs", "mongodb"],
-    // },
+    {
+      id: uid(),
+      name: "Animescraper",
+      description:
+        "An anime scraper that keeps track of your favorite animes and sends you notification after an update",
+      image: "/animescraper.jpg",
+      code: "https://github.com/francisamidu/anime-scraper",
+      web: "http://anime-scraper.netlify.app/",
+      tags: ["react", "nextjs", "nodejs", "mongodb"],
+    },
     // {
     //   id: uid(),
     //   name: "UniPaye",
