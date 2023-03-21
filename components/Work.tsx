@@ -25,6 +25,15 @@ const Work = () => {
     },
     {
       id: uid(),
+      name: "WallpaperGen",
+      description: "Generate wallpapers from text",
+      image: "/avatar-gen.jpg",
+      code: "https://github.com/francisamidu/avatar-gen",
+      web: "http://wallpaper-gen.netlify.app/",
+      tags: ["react", "tailwind", "nextjs", "openai"],
+    },
+    {
+      id: uid(),
       name: "MoralisApp",
       description: "A website demonstrating moralis auth and API usage",
       image: "/moralis.jpg",
