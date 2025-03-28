@@ -1,5 +1,12 @@
 import { onMount, createSignal } from "solid-js";
 import { Github, Twitter, Linkedin, FileText, Folder } from "lucide-solid";
+import linkedinLogo from "@/assets/linkedin-logo.svg";
+import githubLogo from "@/assets/github-logo.svg";
+import twitterLogo from "@/assets/twitter-logo.svg";
+import nextLogo from "@/assets/nextjs-original.svg";
+import reactLogo from "@/assets/react-original.svg";
+import tailwindLogo from "@/assets/tailwindcss-original.svg";
+import typescriptLogo from "@/assets/typescript-original.svg";
 
 export const Hero = () => {
   const [isMounted, setIsMounted] = createSignal(false);
@@ -12,19 +19,19 @@ export const Hero = () => {
   const frontendTools = [
     {
       name: "React",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      icon: reactLogo,
     },
     {
       name: "Next.js",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      icon: nextLogo,
     },
     {
       name: "TypeScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      icon: typescriptLogo,
     },
     {
       name: "Tailwind CSS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+      icon: tailwindLogo,
     },
   ];
 
@@ -54,36 +61,42 @@ export const Hero = () => {
             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-12">
               <a
                 href="#projects"
-                class="flex items-center gap-2 border-b border-foreground transition-all hover:border-primary pb-1"
+                class="flex items-center gap-2 border-b border-foreground transition-all hover:border-primary hover:!text-primary pb-1"
               >
                 <Folder class="w-4 h-4" />
                 <span>Projects</span>
               </a>
               <a
                 href="#about"
-                class="flex items-center gap-2 border-b border-foreground transition-all hover:border-primary pb-1"
+                class="flex items-center gap-2 border-b border-foreground transition-all hover:border-primary hover:!text-primary pb-1"
               >
-                <FileText class="w-4 h-4" />
+                <FileText class="w-4 h-4 " />
                 <span>Resume</span>
               </a>
             </div>
 
             <div class="flex items-center gap-4 mt-12">
               <a
-                href="https://github.com"
+                href="https://github.com/francisamidu"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
               >
-                <Github class="w-6 h-6 text-foreground hover:text-primary transition-colors" />
+                <img
+                  src={githubLogo}
+                  class="w-6 h-6 text-foreground hover:text-primary transition-colors"
+                />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/iamfrancisamidu"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
               >
-                <Twitter class="w-6 h-6 text-foreground hover:text-primary transition-colors" />
+                <img
+                  src={twitterLogo}
+                  class="w-6 h-6 text-foreground hover:text-primary transition-colors"
+                />
               </a>
               <a
                 href="https://linkedin.com"
@@ -91,7 +104,10 @@ export const Hero = () => {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <Linkedin class="w-6 h-6 text-foreground hover:text-primary transition-colors" />
+                <img
+                  src={linkedinLogo}
+                  class="w-6 h-6 text-foreground hover:text-primary transition-colors"
+                />
               </a>
             </div>
           </div>
