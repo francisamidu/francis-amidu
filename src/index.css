@@ -58,6 +58,7 @@ body {
   color: black;
   background-color: white;
   font-family: "Rubik Variable", sans-serif;
+  overflow-x: hidden;
 }
 
 /* Custom colors */

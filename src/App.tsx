@@ -1,10 +1,5 @@
 import { createSignal, onMount } from "solid-js";
 import { Header } from "./components/Header";
-import { Tooling } from "./components/Tooling";
-import { Projects } from "./components/Projects";
-import { About } from "./components/About";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 
 export default function App() {
@@ -22,14 +17,7 @@ export default function App() {
         }`}
       >
         <Header />
-        <main>
-          <Hero />
-          <Tooling />
-          <Projects />
-          <About />
-          <Contact />
-        </main>
-        <Footer />
+        <Hero />
       </div>
     </div>
   );

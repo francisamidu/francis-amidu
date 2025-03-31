@@ -1,12 +1,11 @@
 import { onMount, createSignal } from "solid-js";
-import { Github, Twitter, Linkedin, FileText, Folder } from "lucide-solid";
+import { FileText, Folder, Link } from "lucide-solid";
+import { A } from "@solidjs/router";
+
 import linkedinLogo from "@/assets/linkedin-logo.svg";
 import githubLogo from "@/assets/github-logo.svg";
 import twitterLogo from "@/assets/twitter-logo.svg";
-import nextLogo from "@/assets/nextjs-original.svg";
-import reactLogo from "@/assets/react-original.svg";
-import tailwindLogo from "@/assets/tailwindcss-original.svg";
-import typescriptLogo from "@/assets/typescript-original.svg";
+import { Tooling } from "./Tooling";
 
 export const Hero = () => {
   const [isMounted, setIsMounted] = createSignal(false);
@@ -14,26 +13,6 @@ export const Hero = () => {
   onMount(() => {
     setIsMounted(true);
   });
-
-  // Frontend tools data
-  const frontendTools = [
-    {
-      name: "React",
-      icon: reactLogo,
-    },
-    {
-      name: "Next.js",
-      icon: nextLogo,
-    },
-    {
-      name: "TypeScript",
-      icon: typescriptLogo,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwindLogo,
-    },
-  ];
 
   return (
     <section id="hero" class="min-h-screen pt-28 pb-10">
@@ -47,10 +26,10 @@ export const Hero = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-2">
               Francis Amidu
             </h1>
-            <h2 class="text-2xl font-medium mb-6 text-muted-foreground">
+            <h2 class="text-2xl font-medium mb-8 text-slate-800">
               Frontend Web Architect
             </h2>
 
@@ -59,20 +38,20 @@ export const Hero = () => {
             </p>
 
             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-12">
-              <a
-                href="#projects"
+              <A
+                href="/projects"
                 class="flex items-center gap-2 border-b border-foreground transition-all hover:border-primary hover:!text-primary pb-1"
               >
                 <Folder class="w-4 h-4" />
                 <span>Projects</span>
-              </a>
-              <a
-                href="#about"
+              </A>
+              <A
+                href="/resume"
                 class="flex items-center gap-2 border-b border-foreground transition-all hover:border-primary hover:!text-primary pb-1"
               >
                 <FileText class="w-4 h-4 " />
                 <span>Resume</span>
-              </a>
+              </A>
             </div>
 
             <div class="flex items-center gap-4 mt-12">
@@ -99,7 +78,7 @@ export const Hero = () => {
                 />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/francis-amidu-developer"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -122,34 +101,22 @@ export const Hero = () => {
           >
             <div class="mb-10">
               <p class="text-lg leading-relaxed mb-4">
-                I'm Francis Amidu, a dedicated web architect focusing on
-                creating exceptional digital experiences with modern frontend
-                technologies.
+                Let's face it, we all hate slow websites. But I'm here to change
+                that. Hi, I'm Francis, a problem-solver with expertise in
+                crafting lightning-fast web experiences.
               </p>
               <p class="text-lg leading-relaxed mb-4">
                 I leverage cutting-edge frontend technologies and AI to build
-                solutions that eliminate your pain points, delivering intuitive
-                interfaces that solve real problems and enhance user engagement.
+                solutions that eliminate your pain points. I've helped 5
+                startups overcome performance issues in their web apps, and I'm
+                ready to help you too. Your websites doesn't have to chase away
+                users!
               </p>
             </div>
 
             {/* Frontend Tools Section */}
-            <div class="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border mb-8">
-              <h3 class="text-xl font-medium mb-4">Frontend Tooling</h3>
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                {frontendTools.map((tool) => (
-                  <div class="text-center">
-                    <img
-                      src={tool.icon}
-                      alt={tool.name}
-                      class="w-12 h-12 mx-auto mb-2"
-                    />
-                    <p class="text-sm font-medium">{tool.name}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
 
+            <Tooling />
             {/* Recent Activity Section */}
             <div>
               <h3 class="text-xl font-medium mb-4">Recent Activity</h3>
@@ -160,28 +127,13 @@ export const Hero = () => {
                   <span>Latest Project</span>
                 </div>
 
-                <a
-                  href="#"
-                  class="flex items-center gap-2 hover:text-primary transition-colors"
+                <A
+                  href="/ai-web-dashboard"
+                  class="flex flex-row items-center gap-2 hover:text-primary transition-colors"
                 >
                   <span>AI-Powered Web Dashboard</span>
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="flex-shrink-0"
-                  >
-                    <path
-                      d="M6 3L11 8L6 13"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </a>
+                  <Link class="w-4 h-4" />
+                </A>
               </div>
             </div>
           </div>
