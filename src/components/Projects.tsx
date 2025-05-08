@@ -1,7 +1,21 @@
 import { ArrowUpRight, ExternalLink } from "lucide-solid";
-import { Badge } from "@/components/ui/badge";
 import { A } from "@solidjs/router";
+import { Mail } from "lucide-solid";
+
+import { Badge } from "@/components/ui/badge";
 import githubLogo from "@/assets/github-logo.svg";
+import dehashDashboard from "@/assets/dehash.png";
+
+const projects = [
+  {
+    img: "",
+    name: "",
+    description: "",
+    tags: [],
+    githubLink: "",
+    websiteLink: "",
+  },
+];
 
 export default function ProjectsPage() {
   return (
@@ -33,9 +47,9 @@ export default function ProjectsPage() {
       {/* Page Content - Add padding-top to account for fixed header */}
       <div class="pt-20">
         {/* Hero Section */}
-        <section class="container mx-auto px-4 py-16 md:py-24">
+        <section class="container mx-auto px-4 py-16 md:py-20">
           <div class="max-w-3xl">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+            <h1 class="text-5xl text-slate-800 md:text-6xl font-bold mb-6">
               Projects & Solutions
             </h1>
             <p class="text-xl text-gray-600 mb-8">
@@ -57,16 +71,16 @@ export default function ProjectsPage() {
               <Badge class="mb-4 bg-blue-50 text-blue-700 hover:bg-blue-50 border-0">
                 Featured Project
               </Badge>
-              <h2 class="text-3xl font-bold mb-4">AI-Powered Web Dashboard</h2>
+              <h2 class="text-3xl font-bold mb-4">Dehash</h2>
               <p class="text-gray-600 mb-6">
-                A lightning-fast dashboard that leverages AI to provide
-                real-time insights and analytics. Built with Solid.js,
-                TypeScript, and TailwindCSS, this solution reduced data
-                processing time by 80%.
+                A lightning-fast platform to help businesses turn MSISDN hashes
+                to their corresponding phone number. Built with React,
+                TypeScript, and TailwindCSS, this solution is designed to be
+                perfomant without compromising on features.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
                 <Badge variant="outline" class="rounded-full">
-                  Solid.js
+                  React
                 </Badge>
                 <Badge variant="outline" class="rounded-full">
                   TypeScript
@@ -79,25 +93,25 @@ export default function ProjectsPage() {
                 </Badge>
               </div>
               <div class="flex gap-4">
-                <A
-                  href="#"
-                  class="flex items-center gap-2 text-sm font-medium hover:text-blue-600 transition-colors"
-                >
-                  <img src={githubLogo} class="w-5 h-5" />
-                  View Code
-                </A>
-                <A
-                  href="#"
+                <a
+                  href="https://dehash.co.ke"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Dehash Dashboard"
                   class="flex items-center gap-2 text-sm font-medium hover:text-blue-600 transition-colors"
                 >
                   <ExternalLink size={18} />
                   Live Demo
-                </A>
+                </a>
               </div>
             </div>
-            <div class="order-1 md:order-2 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl overflow-hidden aspect-video flex items-center justify-center">
+            <div class="order-1 md:order-2 rounded-xl overflow-hidden flex items-center justify-center">
               <div class="w-4/5 h-4/5 bg-white rounded-lg shadow-lg flex items-center justify-center">
-                <div class="text-blue-500 font-medium">Dashboard Preview</div>
+                <img
+                  src={dehashDashboard}
+                  alt="Dehash Dashboard"
+                  class="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -105,11 +119,14 @@ export default function ProjectsPage() {
 
         {/* Project Grid */}
         <section class="container mx-auto px-4 py-16 border-t border-gray-100">
-          <h2 class="text-2xl font-bold mb-12">More Solutions</h2>
+          <div class="flex items-center gap-4 mb-5">
+            <div class="h-1 w-12 bg-slate-800"></div>
+            <span class="text-gray-700 text-3xl font-bold">My catalogue</span>
+          </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project Card 1 */}
-            <div class="group">
+            <div>
               <div class="bg-gray-50 rounded-xl overflow-hidden aspect-video mb-4 flex items-center justify-center group-hover:bg-gray-100 transition-colors">
                 <div class="w-4/5 h-3/5 bg-white rounded-lg shadow-sm flex items-center justify-center">
                   <div class="text-gray-400 font-medium">
@@ -117,13 +134,18 @@ export default function ProjectsPage() {
                   </div>
                 </div>
               </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors flex items-center gap-2">
-                E-commerce Performance Boost
-                <ArrowUpRight
-                  size={18}
-                  class="opacity-0 group-hover:opacity-100 transition-opacity"
-                />
-              </h3>
+              <div class="group">
+                <a
+                  href="https://e-commerce.boost"
+                  class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors flex items-center gap-2"
+                >
+                  E-commerce Performance Boost
+                  <ArrowUpRight
+                    size={18}
+                    class="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
+                </a>
+              </div>
               <p class="text-gray-600 mb-3">
                 Optimized a slow e-commerce platform, reducing load times by 65%
                 and increasing conversion rates by 23%.
@@ -298,7 +320,9 @@ export default function ProjectsPage() {
         <section class="container mx-auto px-4 py-16 border-t border-gray-100">
           <div class="bg-gray-50 rounded-xl p-8 md:p-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div>
-              <h2 class="text-3xl font-bold mb-4">Have a project in mind?</h2>
+              <h2 class="text-slate-800 text-3xl font-bold mb-4">
+                Have a project in mind?
+              </h2>
               <p class="text-gray-600 max-w-xl">
                 I'm always open to discussing new projects and challenges. Let's
                 create something amazing together.
@@ -306,8 +330,9 @@ export default function ProjectsPage() {
             </div>
             <A
               href="/contact"
-              class="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors whitespace-nowrap text-center md:text-left"
+              class="bg-slate-900 text-white px-5 py-2 rounded-lg hover:bg-gray-800 transition-colors whitespace-nowrap text-center md:text-left flex items-center"
             >
+              <Mail class="mr-2" size={20} />
               Get in Touch
             </A>
           </div>
@@ -326,7 +351,7 @@ export default function ProjectsPage() {
               © {new Date().getFullYear()} Francis Amidu. All rights reserved.
             </div>
             <div class="flex gap-4">
-              <A
+              <a
                 href="#"
                 class="text-gray-600 hover:text-black transition-colors"
               >
@@ -343,8 +368,8 @@ export default function ProjectsPage() {
                 >
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
-              </A>
-              <A
+              </a>
+              <a
                 href="#"
                 class="text-gray-600 hover:text-black transition-colors"
               >
@@ -361,8 +386,8 @@ export default function ProjectsPage() {
                 >
                   <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                 </svg>
-              </A>
-              <A
+              </a>
+              <a
                 href="#"
                 class="text-gray-600 hover:text-black transition-colors"
               >
@@ -381,7 +406,7 @@ export default function ProjectsPage() {
                   <rect x="2" y="9" width="4" height="12" />
                   <circle cx="4" cy="4" r="2" />
                 </svg>
-              </A>
+              </a>
             </div>
           </div>
         </footer>

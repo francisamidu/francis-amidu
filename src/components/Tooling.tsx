@@ -1,5 +1,3 @@
-import { createSignal } from "solid-js";
-
 import nextLogo from "@/assets/nextjs-original.svg";
 import reactLogo from "@/assets/react-original.svg";
 import tailwindLogo from "@/assets/tailwindcss-original.svg";
@@ -11,7 +9,7 @@ interface Tool {
 }
 
 export function Tooling() {
-  const frontendTools: Tool[] = [
+  const tools: Tool[] = [
     {
       name: "React",
       icon: reactLogo,
@@ -34,7 +32,7 @@ export function Tooling() {
     <div class="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border mb-8">
       <h3 class="text-xl font-medium mb-4">Frontend Tooling</h3>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-        {frontendTools.map((tool) => (
+        {tools.map((tool) => (
           <div class="text-center">
             <img
               src={tool.icon}

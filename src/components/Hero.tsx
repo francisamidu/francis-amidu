@@ -63,7 +63,7 @@ export const Hero = () => {
               >
                 <img
                   src={githubLogo}
-                  class="w-6 h-6 text-foreground hover:text-primary transition-colors"
+                  class="w-10 h-10 text-foreground hover:text-primary transition-colors"
                 />
               </a>
               <a
@@ -74,18 +74,18 @@ export const Hero = () => {
               >
                 <img
                   src={twitterLogo}
-                  class="w-6 h-6 text-foreground hover:text-primary transition-colors"
+                  class="w-10 h-10 text-foreground hover:text-primary transition-colors"
                 />
               </a>
               <a
-                href="https://linkedin.com/in/francis-amidu-developer"
+                href="https://linkedin.com/in/francis-amidu-frontend-developer"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
                 <img
                   src={linkedinLogo}
-                  class="w-6 h-6 text-foreground hover:text-primary transition-colors"
+                  class="w-10 h-10 text-foreground hover:text-primary transition-colors"
                 />
               </a>
             </div>
