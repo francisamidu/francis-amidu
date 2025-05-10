@@ -16,7 +16,7 @@ const projects = [
       "A lightning-fast platform to help businesses turn MSISDN hashes to their corresponding phone number. Built with React, TypeScript, and TailwindCSS, this solution is designed to be performant without compromising on features.",
     tags: ["React", "TypeScript", "TailwindCSS", "AI Integration"],
     githubLink: "",
-    websiteLink: "https://dehash.co.ke",
+    websiteLink: "#",
     featured: true,
     badgeColor: "bg-blue-50 text-blue-700 hover:bg-blue-50 border-0",
   },
