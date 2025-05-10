@@ -128,10 +128,10 @@ export const Hero = () => {
                 </div>
 
                 <A
-                  href="/ai-web-dashboard"
+                  href="/projects"
                   class="flex flex-row items-center gap-2 hover:text-primary transition-colors"
                 >
-                  <span>AI-Powered Web Dashboard</span>
+                  <span>Dehash</span>
                   <Link class="w-4 h-4" />
                 </A>
               </div>
