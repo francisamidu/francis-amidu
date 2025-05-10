@@ -4,16 +4,44 @@ import { Mail } from "lucide-solid";
 
 import { Badge } from "@/components/ui/badge";
 import githubLogo from "@/assets/github-logo.svg";
+import aiditaDashboard from "@/assets/aidita.png";
 import dehashDashboard from "@/assets/dehash.png";
+import { For } from "solid-js";
 
 const projects = [
   {
-    img: "",
-    name: "",
-    description: "",
-    tags: [],
+    img: dehashDashboard,
+    name: "Dehash",
+    description:
+      "A lightning-fast platform to help businesses turn MSISDN hashes to their corresponding phone number. Built with React, TypeScript, and TailwindCSS, this solution is designed to be performant without compromising on features.",
+    tags: ["React", "TypeScript", "TailwindCSS", "AI Integration"],
     githubLink: "",
-    websiteLink: "",
+    websiteLink: "https://dehash.co.ke",
+    featured: true,
+    badgeColor: "bg-blue-50 text-blue-700 hover:bg-blue-50 border-0",
+  },
+  {
+    img: aiditaDashboard,
+    name: "Aidita",
+    description:
+      "Aidita is an AI-driven video editing platform that simplifies the process of creating high-quality, professional videos.",
+    tags: ["Next.js", "Typescript"],
+    githubLink: "https://github.com/francisamidu/aidita-landing",
+    websiteLink: "https://aidita.netlify.app",
+    featured: false,
+    badgeColor: "text-indigo-700 group-hover:text-indigo-500",
+  },
+
+  {
+    img: "",
+    name: "YouTube Downloader Tool",
+    description:
+      "Created a minimalist, high-performance YouTube video downloader with multiple format options.",
+    tags: ["Solid.js", "API Integration"],
+    githubLink: "",
+    websiteLink: "#",
+    featured: false,
+    badgeColor: "text-cyan-700 group-hover:text-cyan-500",
   },
 ];
 
@@ -71,30 +99,20 @@ export default function ProjectsPage() {
               <Badge class="mb-4 bg-blue-50 text-blue-700 hover:bg-blue-50 border-0">
                 Featured Project
               </Badge>
-              <h2 class="text-3xl font-bold mb-4">Dehash</h2>
-              <p class="text-gray-600 mb-6">
-                A lightning-fast platform to help businesses turn MSISDN hashes
-                to their corresponding phone number. Built with React,
-                TypeScript, and TailwindCSS, this solution is designed to be
-                perfomant without compromising on features.
-              </p>
+              <h2 class="text-3xl font-bold mb-4">{projects[0].name}</h2>
+              <p class="text-gray-600 mb-6">{projects[0].description}</p>
               <div class="flex flex-wrap gap-2 mb-6">
-                <Badge variant="outline" class="rounded-full">
-                  React
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  TypeScript
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  TailwindCSS
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  AI Integration
-                </Badge>
+                <For each={projects[0].tags}>
+                  {(tag) => (
+                    <Badge variant="outline" class="rounded-full">
+                      {tag}
+                    </Badge>
+                  )}
+                </For>
               </div>
               <div class="flex gap-4">
                 <a
-                  href="https://dehash.co.ke"
+                  href={projects[0].websiteLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Dehash Dashboard"
@@ -125,194 +143,60 @@ export default function ProjectsPage() {
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project Card 1 */}
-            <div>
-              <div class="bg-gray-50 rounded-xl overflow-hidden aspect-video mb-4 flex items-center justify-center group-hover:bg-gray-100 transition-colors">
-                <div class="w-4/5 h-3/5 bg-white rounded-lg shadow-sm flex items-center justify-center">
-                  <div class="text-gray-400 font-medium">
-                    E-commerce Platform
+            <For each={projects.slice(1)}>
+              {(project) => (
+                <div class="group">
+                  <div class="bg-cyan-50 rounded-xl overflow-hidden aspect-video mb-4 flex items-center justify-center group-hover:bg-cyan-100 transition-colors">
+                    {project.img ? (
+                      <img
+                        src={project.img}
+                        alt={project.name}
+                        class="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div class="w-4/5 h-3/5 bg-white rounded-lg shadow-sm flex items-center justify-center">
+                        <a
+                          href={project.websiteLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={project.name}
+                          class={`${project.badgeColor}`}
+                        >
+                          {project.name}
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                  <h3
+                    class={`text-xl font-bold mb-2 ${project.badgeColor} transition-colors flex items-center gap-2`}
+                  >
+                    <a
+                      href={project.websiteLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={project.name}
+                      class={`font-medium ${project.badgeColor}`}
+                    >
+                      {project.name}
+                    </a>
+                    <ArrowUpRight
+                      size={18}
+                      class="opacity-0 group-hover:opacity-100 transition-opacity"
+                    />
+                  </h3>
+                  <p class="text-gray-600 mb-3">{project.description}</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <For each={project.tags}>
+                      {(tag) => (
+                        <Badge variant="outline" class="rounded-full">
+                          {tag}
+                        </Badge>
+                      )}
+                    </For>
                   </div>
                 </div>
-              </div>
-              <div class="group">
-                <a
-                  href="https://e-commerce.boost"
-                  class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors flex items-center gap-2"
-                >
-                  E-commerce Performance Boost
-                  <ArrowUpRight
-                    size={18}
-                    class="opacity-0 group-hover:opacity-100 transition-opacity"
-                  />
-                </a>
-              </div>
-              <p class="text-gray-600 mb-3">
-                Optimized a slow e-commerce platform, reducing load times by 65%
-                and increasing conversion rates by 23%.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <Badge variant="outline" class="rounded-full">
-                  Next.js
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  Performance
-                </Badge>
-              </div>
-            </div>
-
-            {/* Project Card 2 */}
-            <div class="group">
-              <div class="bg-amber-50 rounded-xl overflow-hidden aspect-video mb-4 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
-                <div class="w-4/5 h-3/5 bg-white rounded-lg shadow-sm flex items-center justify-center">
-                  <div class="text-amber-400 font-medium">
-                    Content Management
-                  </div>
-                </div>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-amber-600 transition-colors flex items-center gap-2">
-                Headless CMS Integration
-                <ArrowUpRight
-                  size={18}
-                  class="opacity-0 group-hover:opacity-100 transition-opacity"
-                />
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Built a custom headless CMS solution that allowed content
-                editors to work 3x faster with an intuitive interface.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <Badge variant="outline" class="rounded-full">
-                  Solid.js
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  GraphQL
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  CMS
-                </Badge>
-              </div>
-            </div>
-
-            {/* Project Card 3 */}
-            <div class="group">
-              <div class="bg-green-50 rounded-xl overflow-hidden aspect-video mb-4 flex items-center justify-center group-hover:bg-green-100 transition-colors">
-                <div class="w-4/5 h-3/5 bg-white rounded-lg shadow-sm flex items-center justify-center">
-                  <div class="text-green-400 font-medium">
-                    Analytics Dashboard
-                  </div>
-                </div>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-green-600 transition-colors flex items-center gap-2">
-                Real-time Analytics Platform
-                <ArrowUpRight
-                  size={18}
-                  class="opacity-0 group-hover:opacity-100 transition-opacity"
-                />
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Developed a real-time analytics dashboard for a SaaS company,
-                processing over 1M events daily.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <Badge variant="outline" class="rounded-full">
-                  TypeScript
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  WebSockets
-                </Badge>
-              </div>
-            </div>
-
-            {/* Project Card 4 */}
-            <div class="group">
-              <div class="bg-purple-50 rounded-xl overflow-hidden aspect-video mb-4 flex items-center justify-center group-hover:bg-purple-100 transition-colors">
-                <div class="w-4/5 h-3/5 bg-white rounded-lg shadow-sm flex items-center justify-center">
-                  <div class="text-purple-400 font-medium">Mobile App</div>
-                </div>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-purple-600 transition-colors flex items-center gap-2">
-                Cross-platform Mobile Application
-                <ArrowUpRight
-                  size={18}
-                  class="opacity-0 group-hover:opacity-100 transition-opacity"
-                />
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Built a React Native app that works seamlessly across iOS and
-                Android with a shared codebase.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <Badge variant="outline" class="rounded-full">
-                  React Native
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  Mobile
-                </Badge>
-              </div>
-            </div>
-
-            {/* Project Card 5 */}
-            <div class="group">
-              <div class="bg-red-50 rounded-xl overflow-hidden aspect-video mb-4 flex items-center justify-center group-hover:bg-red-100 transition-colors">
-                <div class="w-4/5 h-3/5 bg-white rounded-lg shadow-sm flex items-center justify-center">
-                  <div class="text-red-400 font-medium">
-                    Authentication System
-                  </div>
-                </div>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors flex items-center gap-2">
-                Secure Authentication System
-                <ArrowUpRight
-                  size={18}
-                  class="opacity-0 group-hover:opacity-100 transition-opacity"
-                />
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Implemented a secure, multi-factor authentication system with
-                biometric support for a fintech startup.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <Badge variant="outline" class="rounded-full">
-                  Security
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  OAuth
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  Biometrics
-                </Badge>
-              </div>
-            </div>
-
-            {/* Project Card 6 */}
-            <div class="group">
-              <div class="bg-cyan-50 rounded-xl overflow-hidden aspect-video mb-4 flex items-center justify-center group-hover:bg-cyan-100 transition-colors">
-                <div class="w-4/5 h-3/5 bg-white rounded-lg shadow-sm flex items-center justify-center">
-                  <div class="text-cyan-400 font-medium">
-                    YouTube Downloader
-                  </div>
-                </div>
-              </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-600 transition-colors flex items-center gap-2">
-                YouTube Downloader Tool
-                <ArrowUpRight
-                  size={18}
-                  class="opacity-0 group-hover:opacity-100 transition-opacity"
-                />
-              </h3>
-              <p class="text-gray-600 mb-3">
-                Created a minimalist, high-performance YouTube video downloader
-                with multiple format options.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <Badge variant="outline" class="rounded-full">
-                  Solid.js
-                </Badge>
-                <Badge variant="outline" class="rounded-full">
-                  API Integration
-                </Badge>
-              </div>
-            </div>
+              )}
+            </For>
           </div>
         </section>
 
