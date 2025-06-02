@@ -13,6 +13,7 @@
   "dependencies": {
     "@fontsource-variable/rubik": "^5.2.5",
     "@kobalte/core": "^0.13.7",
+    "@pdfslick/solid": "^3.0.0",
     "@solidjs/router": "^0.15.3",
     "@types/node": "^22.10.9",
     "autoprefixer": "^10.4.20",
